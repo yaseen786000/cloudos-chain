@@ -6,7 +6,7 @@ import (
 
 	clientv2helpers "cosmossdk.io/client/v2/helpers"
 	"github.com/yaseen786000/cloudos-chain"
-	"github.com/yaseen786000/cloudos-chain/exampled/cmd"
+	"github.com/yaseen786000/cloudos-chain/cloudosd/cmd"
 
 	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
 )

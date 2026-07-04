@@ -43,7 +43,7 @@ func NewRootCmd() *cobra.Command {
 		WithViper("") // uses by default the binary name as prefix
 
 	rootCmd := &cobra.Command{
-		Use:           "exampled",
+		Use:           "cloudosd",
 		Short:         "example app",
 		SilenceErrors: true,
 		PersistentPreRunE: func(cmd *cobra.Command, _ []string) error {
