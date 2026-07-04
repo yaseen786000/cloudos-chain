@@ -93,7 +93,7 @@ var (
 
 func init() {
 	var err error
-	DefaultNodeHome, err = helpers.GetNodeHomeDirectory(".exampleapp")
+	DefaultNodeHome, err = helpers.GetNodeHomeDirectory(".cloudos")
 	if err != nil {
 		panic(err)
 	}
