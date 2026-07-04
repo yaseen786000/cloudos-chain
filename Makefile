@@ -1,16 +1,16 @@
 DOCKER := $(shell which docker)
-PROTO_BUILDER_IMAGE := example-proto-builder
+PROTO_BUILDER_IMAGE := cloudos-proto-builder
 
 build:
-	go build -o ./build/myapp ./exampled
-
+	mkdir -p build
+	go build -o ./build/cloudosd ./cloudosd
 
 install:
-	go install ./exampled
+	go install ./cloudosd
 
 start: install
 	./scripts/local_node.sh
-	exampled start
+	cloudosd start --home ~/.cloudos
 
 
 proto-image-build:
@@ -69,7 +69,7 @@ test-sim:
 ###                              Docker / Localnet                          ###
 ###############################################################################
 
-DOCKER_IMAGE := example-node
+DOCKER_IMAGE := cloudos-node
 
 build-docker:
 	@echo "--> Building Docker image $(DOCKER_IMAGE)"
